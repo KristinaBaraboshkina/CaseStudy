@@ -13,9 +13,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -37,7 +37,6 @@
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/Documents/program/WebStormProgects",
     "list.type.of.created.stylesheet": "CSS",
@@ -70,7 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731372473898</updated>
       <workItem from="1731372475364" duration="233000" />
-      <workItem from="1731372722284" duration="2131000" />
+      <workItem from="1731372722284" duration="3020000" />
     </task>
     <servers />
   </component>
