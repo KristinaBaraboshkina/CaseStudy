@@ -46,6 +46,7 @@ logo.addEventListener("click", () => {
     jobBg.style.background = bg;
 });
 // end of detailed view logic
+//start of filter logic
 let jobData = [];  // Массив для хранения всех данных из JSON
 
 // Загружаем данные из JSON при загрузке страницы
@@ -57,19 +58,79 @@ fetch('json/jobs.json')
     })
     .catch(error => console.error('Error loading job data:', error));
 
+// Заполнение выпадающих списков для Location и Job Type
+document.addEventListener("DOMContentLoaded", function () {
+    populateSelectOptions();
+});
+
+function populateSelectOptions() {
+    const jobTypes = new Set();
+    const locations = new Set();
+
+    // Собираем уникальные значения из данных вакансий
+    jobData.forEach(job => {
+        jobTypes.add(job.jobType); // добавляем уникальные jobType
+        // Здесь можно добавить логику для добавления локаций, если они будут в данных
+    });
+
+    // Заполнение выпадающего списка "Location" (пока пустое)
+    const locationSelect = document.getElementById("location-select");
+    locations.forEach(location => {
+        const option = document.createElement("option");
+        option.value = location;
+        option.textContent = location;
+        locationSelect.appendChild(option);
+    });
+
+    // Заполнение выпадающего списка "Job Type"
+    const jobTypeSelect = document.getElementById("job-type-select");
+    jobTypes.forEach(jobType => {
+        const option = document.createElement("option");
+        option.value = jobType;
+        option.textContent = jobType;
+        jobTypeSelect.appendChild(option);
+    });
+}
+
+// Функция фильтрации вакансий
+function filterJobs() {
+    const locationFilter = document.getElementById("location-select").value;
+    const jobTypeFilter = document.getElementById("job-type-select").value;
+
+    // Применяем фильтры к списку вакансий
+    const filteredJobs = jobData.filter(job => {
+        const matchesLocation = locationFilter === "" || job.location === locationFilter;
+        const matchesJobType = jobTypeFilter === "" || job.jobType === jobTypeFilter;
+        return matchesLocation && matchesJobType;
+    });
+
+    // Отображаем отфильтрованные вакансии (замени эту логику на свою)
+    generateJobCards(filteredJobs);
+}
+
+// Функция для отображения вакансий
+function generateJobCards(jobs) {
+    const jobContainer = document.getElementById("job-cards");
+    jobContainer.innerHTML = ''; // Очистка контейнера перед добавлением новых карточек
+
+    jobs.forEach(job => {
+        const jobCard = document.createElement("div");
+        jobCard.classList.add("job-card");
+        jobCard.innerHTML = `
+            <h2>${job.jobTitle}</h2>
+            <p>${job.jobSubtitle}</p>
+            <p><strong>Job Type:</strong> ${job.jobType}</p>
+            <p><a href="${job.applyNowLink}">Apply Now</a></p>
+        `;
+        jobContainer.appendChild(jobCard);
+    });
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
     // Привязываем функцию addFilter к полю Job Type
     const jobTypeInput = document.querySelector('.search-job input');
     jobTypeInput.addEventListener('keypress', addFilter);
-
-    // Привязываем фильтрацию к удалению фильтров
-    const filterContainer = document.getElementById('search-filters');
-    filterContainer.addEventListener('click', function(event) {
-        if (event.target.classList.contains('feather-x')) {
-            filterContainer.removeChild(event.target.closest('.search-item'));
-            filterJobs();  // Обновляем отображение после удаления фильтра
-        }
-    });
 });
 
 // Добавление фильтра при нажатии Enter
@@ -101,8 +162,12 @@ function createFilterElement(text) {
     removeIcon.innerHTML = '<path d="M18 6L6 18M6 6l12 12" />';
     removeIcon.className = 'feather feather-x';
     removeIcon.setAttribute('viewBox', '0 0 24 24');
-    filterItem.appendChild(removeIcon);
+    removeIcon.addEventListener('click', () => {
+        filterContainer.removeChild(filterItem);
+        filterJobs();  // Обновляем отображение после удаления фильтра
+    });
 
+    filterItem.appendChild(removeIcon);
     filterContainer.appendChild(filterItem);
 }
 
@@ -111,7 +176,7 @@ function filterJobs() {
     const searchText = document.querySelector(".search-box").value.toLowerCase();
     const selectedFilters = Array.from(document.querySelectorAll(".search-item"))
         .map(item => item.textContent.toLowerCase().trim());
-    const locationText = document.querySelector(".search-location-input") ? document.querySelector(".search-location-input").value.toLowerCase() : '';
+    const locationText = document.querySelector(".search-location-input").value.toLowerCase();
 
     const filteredJobs = jobData.filter(job => {
         const matchesText = job.jobTitle.toLowerCase().includes(searchText) ||
@@ -128,12 +193,22 @@ function filterJobs() {
 
     generateJobCards(filteredJobs);
 }
+//end of filter logic
 
-// Генерация карточек вакансий
+// the beginning of card logic
+// Load job data from JSON
+fetch('json/jobs.json')
+    .then(response => response.json())
+    .then(data => {
+        // Generate job cards with data
+        generateJobCards(data);
+    })
+    .catch(error => console.error('Error loading job data:', error));
+
 function generateJobCards(jobList) {
     const jobListContainer = document.getElementById("job-cards");
 
-    // Очищаем текущие карточки
+    // Clear the job cards before generating new ones
     jobListContainer.innerHTML = '';
 
     jobList.forEach(job => {

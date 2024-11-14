@@ -64,19 +64,23 @@
                 <!-- Здесь будут отображаться добавленные фильтры -->
                 <div id="search-filters" class="search-filters"></div>
             </div>
+
             <div class="search-location">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-                    <circle cx="12" cy="10" r="3" />
-                </svg>
-                <input type="text" placeholder="Location" oninput="filterJobs()" class="search-location-input" />
+                <label for="location-select">Location</label>
+                <select id="location-select" onchange="filterJobs()">
+                    <option value="">Select Location</option>
+                    <!-- Location options will be added dynamically -->
+                </select>
             </div>
+
             <div class="search-job">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase">
-                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-                    <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" /></svg>
-                <input type="text" placeholder="Job Type" onkeypress="addFilter(event)">
+                <label for="job-type-select">Job Type</label>
+                <select id="job-type-select" onchange="filterJobs()">
+                    <option value="">Select Job Type</option>
+                    <!-- Job Type options will be added dynamically -->
+                </select>
             </div>
+
             <button class="search-button" onclick="filterJobs()">Find Job</button>
         </div>
         <div class="main-container">
