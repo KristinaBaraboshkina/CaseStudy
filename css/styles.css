@@ -115,15 +115,15 @@ body {
 }
 
 .header-menu a {
-    color: inherit;          /* Убирает синий цвет, наследуя цвет родителя */
-    text-decoration: none;   /* Убирает подчеркивание */
-    font-weight: normal;      /* Убирает возможное выделение жирным */
+    color: inherit;
+    text-decoration: none;
+    font-weight: normal;
     margin-right: 10px;
     margin-left: 10px;
 }
 
 .header-menu a.active {
-    font-weight: bold; /* Выделяем активную ссылку жирным */
+    font-weight: bold;
     margin-right: 10px;
     margin-left: 14px;
 }
