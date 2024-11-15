@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f48156b7-183d-4912-a5a2-91555cb49ec8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/json/jobs.json" beforeDir="false" afterPath="$PROJECT_DIR$/json/jobs.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +45,7 @@
     "JavaScript Debug.index.html.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "broke",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/Documents/program/CaseStudy",
     "list.type.of.created.stylesheet": "SCSS",
@@ -101,6 +97,7 @@
       <workItem from="1731444553161" duration="3208000" />
       <workItem from="1731512782051" duration="25585000" />
       <workItem from="1731605586736" duration="5823000" />
+      <workItem from="1731635455635" duration="603000" />
     </task>
     <servers />
   </component>
