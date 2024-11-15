@@ -10,7 +10,10 @@
     "logoPath1": "M2 2 L10 2 L10 10 L2 10 Z",
     "logoFillColor1": "#042b48",
     "logoPath2": "M12 4 L18 4 L15 10 Z",
-    "logoFillColor2": "#fefefe"
+    "logoFillColor2": "#fefefe",
+    "location": "New York, USA",
+    "industry": "Web Development",
+    "salary": "USD 50,000 - 70,000"
   },
   {
     "jobTitle": "Product Manager",
@@ -23,7 +26,10 @@
     "logoPath1": "M5 5 L25 5 L25 25 L5 25 Z",
     "logoFillColor1": "#feb0a5",
     "logoPath2": "M10 10 L20 5 L30 10 L20 15 Z",
-    "logoFillColor2": "#a3d4ff"
+    "logoFillColor2": "#a3d4ff",
+    "location": "London, UK",
+    "industry": "Product Management",
+    "salary": "GBP 40,000 - 60,000"
   },
   {
     "jobTitle": "UI Designer",
@@ -36,7 +42,10 @@
     "logoPath1": "M6 6 A10 10 0 0 1 18 18 L6 18 Z",
     "logoFillColor1": "#fbbc05",
     "logoPath2": "M8 2 L24 8 L24 24 Z",
-    "logoFillColor2": "#ea4335"
+    "logoFillColor2": "#ea4335",
+    "location": "Berlin, Germany",
+    "industry": "Design",
+    "salary": "EUR 30,000 - 40,000"
   },
   {
     "jobTitle": "Data Analyst",
@@ -49,7 +58,10 @@
     "logoPath1": "M4 4 L12 4 L8 16 Z",
     "logoFillColor1": "#cc0000",
     "logoPath2": "M12 12 A8 8 0 1 1 28 12 Z",
-    "logoFillColor2": "#336699"
+    "logoFillColor2": "#336699",
+    "location": "San Francisco, USA",
+    "industry": "Data Analysis",
+    "salary": "USD 60,000 - 80,000"
   },
   {
     "jobTitle": "Backend Developer",
@@ -62,7 +74,10 @@
     "logoPath1": "M4 12 L12 4 L20 12 Z",
     "logoFillColor1": "#4b3832",
     "logoPath2": "M10 10 L10 22 L22 22 Z",
-    "logoFillColor2": "#ffe156"
+    "logoFillColor2": "#ffe156",
+    "location": "Remote",
+    "industry": "Software Development",
+    "salary": "USD 70,000 - 90,000"
   },
   {
     "jobTitle": "Graphic Designer",
@@ -75,7 +90,10 @@
     "logoPath1": "M2 8 L16 2 L30 8 L16 30 Z",
     "logoFillColor1": "#7f7fff",
     "logoPath2": "M8 8 L24 8 L16 28 Z",
-    "logoFillColor2": "#ff007f"
+    "logoFillColor2": "#ff007f",
+    "location": "Paris, France",
+    "industry": "Design",
+    "salary": "EUR 25,000 - 35,000"
   },
   {
     "jobTitle": "Marketing Specialist",
@@ -88,7 +106,10 @@
     "logoPath1": "M4 4 L28 4 L16 24 Z",
     "logoFillColor1": "#ecf0f1",
     "logoPath2": "M4 10 L10 28 L28 10 Z",
-    "logoFillColor2": "#3498db"
+    "logoFillColor2": "#3498db",
+    "location": "Toronto, Canada",
+    "industry": "Marketing",
+    "salary": "CAD 50,000 - 70,000"
   },
   {
     "jobTitle": "Business Analyst",
@@ -101,7 +122,10 @@
     "logoPath1": "M2 2 H28 V28 H2 Z",
     "logoFillColor1": "#2980b9",
     "logoPath2": "M4 4 L28 4 L16 16 Z",
-    "logoFillColor2": "#c0392b"
+    "logoFillColor2": "#c0392b",
+    "location": "Remote",
+    "industry": "Business Analysis",
+    "salary": "USD 55,000 - 75,000"
   },
   {
     "jobTitle": "Content Writer",
@@ -114,7 +138,10 @@
     "logoPath1": "M16 2 L2 28 H30 Z",
     "logoFillColor1": "#9b59b6",
     "logoPath2": "M8 8 L24 8 L16 28 Z",
-    "logoFillColor2": "#e74c3c"
+    "logoFillColor2": "#e74c3c",
+    "location": "Sydney, Australia",
+    "industry": "Writing",
+    "salary": "AUD 40,000 - 60,000"
   },
   {
     "jobTitle": "HR Specialist",
@@ -127,71 +154,9 @@
     "logoPath1": "M4 4 A16 16 0 0 1 28 28 Z",
     "logoFillColor1": "#2ecc71",
     "logoPath2": "M8 8 L24 8 L24 24 Z",
-    "logoFillColor2": "#34495e"
-  },
-  {
-    "jobTitle": "Project Manager",
-    "jobSubtitle": "Oversee project timelines and deliverables.",
-    "jobType": "Part Time",
-    "experienceLevel": "Min. 5 Years",
-    "jobLevel": "Senior Level",
-    "applyNowLink": "#project-manager-apply-link",
-    "logoBackgroundColor": "#e67e22",
-    "logoPath1": "M16 4 L2 28 H30 Z",
-    "logoFillColor1": "#16a085",
-    "logoPath2": "M6 6 L26 6 L16 24 Z",
-    "logoFillColor2": "#bdc3c7"
-  },
-  {
-    "jobTitle": "Operations Manager",
-    "jobSubtitle": "Manage daily operations and logistics.",
-    "jobType": "Full Time",
-    "experienceLevel": "Min. 5 Years",
-    "jobLevel": "Senior Level",
-    "applyNowLink": "#operations-manager-apply-link",
-    "logoBackgroundColor": "#e74c3c",
-    "logoPath1": "M2 2 H28 V28 H2 Z",
-    "logoFillColor1": "#3498db",
-    "logoPath2": "M16 8 A8 8 0 1 1 16 24 Z",
-    "logoFillColor2": "#2ecc71"
-  },
-  {
-    "jobTitle": "Data Scientist",
-    "jobSubtitle": "Analyze and interpret complex datasets.",
-    "jobType": "Full Time",
-    "experienceLevel": "Min. 4 Years",
-    "jobLevel": "Senior Level",
-    "applyNowLink": "#data-scientist-apply-link",
-    "logoBackgroundColor": "#34495e",
-    "logoPath1": "M4 4 L28 4 L16 24 Z",
-    "logoFillColor1": "#1abc9c",
-    "logoPath2": "M4 10 L10 28 L28 10 Z",
-    "logoFillColor2": "#f39c12"
-  },
-  {
-    "jobTitle": "Financial Analyst",
-    "jobSubtitle": "Analyze financial data and trends.",
-    "jobType": "Contract",
-    "experienceLevel": "Min. 2 Years",
-    "jobLevel": "Mid Level",
-    "applyNowLink": "#financial-analyst-apply-link",
-    "logoBackgroundColor": "#7f8c8d",
-    "logoPath1": "M4 4 L28 4 L16 24 Z",
-    "logoFillColor1": "#c0392b",
-    "logoPath2": "M8 4 L24 8 L16 28 Z",
-    "logoFillColor2": "#8e44ad"
-  },
-  {
-    "jobTitle": "UX Researcher",
-    "jobSubtitle": "Gather insights to improve user experiences.",
-    "jobType": "Freelance",
-    "experienceLevel": "Min. 2 Years",
-    "jobLevel": "Mid Level",
-    "applyNowLink": "#ux-researcher-apply-link",
-    "logoBackgroundColor": "#f39c12",
-    "logoPath1": "M2 12 L16 4 L30 12 L16 30 Z",
-    "logoFillColor1": "#2980b9",
-    "logoPath2": "M10 6 L26 10 L16 28 Z",
-    "logoFillColor2": "#e74c3c"
+    "logoFillColor2": "#34495e",
+    "location": "Berlin, Germany",
+    "industry": "Human Resources",
+    "salary": "EUR 45,000 - 65,000"
   }
 ]

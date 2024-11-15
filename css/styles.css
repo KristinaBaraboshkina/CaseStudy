@@ -60,7 +60,7 @@ body {
 
 .dark-light svg {
     margin-right: 8px;
-    width: 22px;
+    width: 26px;
     cursor: pointer;
     fill: transparent;
     transition: 0.5s;
@@ -108,9 +108,24 @@ body {
     font-size: 18px;
     cursor: pointer;
     svg {
-        width: 100px;
+        width: 150px;
         margin-right: 12px;
+        margin-bottom: 14px;
     }
+}
+
+.header-menu a {
+    color: inherit;          /* Убирает синий цвет, наследуя цвет родителя */
+    text-decoration: none;   /* Убирает подчеркивание */
+    font-weight: normal;      /* Убирает возможное выделение жирным */
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.header-menu a.active {
+    font-weight: bold; /* Выделяем активную ссылку жирным */
+    margin-right: 10px;
+    margin-left: 14px;
 }
 
 .header {
@@ -170,8 +185,8 @@ body {
     }
 }
 .user-profile {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     object-fit: cover;
     margin-right: 10px;
@@ -212,7 +227,7 @@ body {
         display: block;
         background-color: transparent;
         border: none;
-        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56.966 56.966' fill='%232f2f33'%3e%3cpath d='M55.146 51.887L41.588 37.786A22.926 22.926 0 0046.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 00.083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z'/%3e%3c/svg%3e");
+        /*background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56.966 56.966' fill='%232f2f33'%3e%3cpath d='M55.146 51.887L41.588 37.786A22.926 22.926 0 0046.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 00.083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z'/%3e%3c/svg%3e");*/
         background-repeat: no-repeat;
         background-size: 14px;
         background-position: 0 50%;
@@ -221,7 +236,6 @@ body {
 }
 
 .search-location,
-.search-job,
 .search-salary {
     display: flex;
     align-items: center;
@@ -243,6 +257,57 @@ body {
         color: var(--active-color);
         flex-shrink: 0;
     }
+}
+.search-job {
+    display: flex;
+    align-items: center;
+    position: relative; /* Ensure the list appears over other elements */
+    width: 50%;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 25px;
+    height: 100%;
+}
+
+.search-job input {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: transparent;
+    border: none;
+}
+
+.search-job svg {
+    margin-right: 8px;
+    width: 18px;
+    color: var(--active-color);
+    flex-shrink: 0;
+}
+
+/* Styling for the job type list */
+.job-type-list {
+    display: none; /* Hidden by default */
+    position: absolute; /* Position it over other elements */
+    top: 100%; /* Align below the input */
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 100%;
+    z-index: 10; /* Ensure the list appears above other elements */
+    max-height: 150px;
+    overflow-y: auto; /* Allow scrolling if there are many items */
+    padding: 0;
+    margin: 0;
+}
+
+.job-type-list li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.job-type-list li:hover {
+    background-color: #f0f0f0;
 }
 
 .search-button {
@@ -920,6 +985,7 @@ body {
     }
     .header-menu a:not(:first-child) {
         margin-left: 10px;
+
     }
 }
 
